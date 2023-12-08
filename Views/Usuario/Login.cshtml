@@ -1,0 +1,26 @@
+﻿@model ProjetoFinal.Models.Usuario
+
+@{
+    ViewData["Title"] = "Login";
+    Layout = null;
+}
+<div>
+    <form asp-action="Login">
+         <div>
+            <label asp-for="UsuarioEmail"></label>
+            <input asp-for="UsuarioEmail" />
+            <span asp-validation-for="UsuarioEmail"></span>
+        </div>
+        <div>
+            <label asp-for="UsuarioSenha"></label>
+            <input asp-for="UsuarioSenha" />
+            <span asp-validation-for="UsuarioSenha"></span>
+        </div>
+        <br />
+            <h4>@ViewBag.Mensagem</h4>
+        <br />
+        <div>
+            <input type="submit" value="Entrar"/>
+        </div>
+    </form>
+</div>
